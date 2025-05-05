@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/ProviderTestes/contador/count_cart_provider/state/cart.dart';
-import 'package:myapp/ProviderTestes/contador/count_cart_provider/state/count.dart';
+import 'package:myapp/ProviderTestes/contador/aula_multiprovider_count_card/state/cart.dart';
+import 'package:myapp/ProviderTestes/contador/aula_multiprovider_count_card/state/count.dart';
 import 'package:provider/provider.dart';
 
 class Second extends StatelessWidget {
-  const Second({Key? key}) : super(key: key);
+  const Second({super.key});
 
   @override
   Widget build(BuildContext context) {

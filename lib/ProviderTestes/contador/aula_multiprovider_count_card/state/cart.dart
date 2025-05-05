@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class Cart with ChangeNotifier{
 
-  List<String> _cart = ['banana', 'maça', 'uva'];
+  final List<String> _cart = ['banana', 'maça', 'uva'];
 
   int get count => _cart.length;
 
@@ -13,6 +13,5 @@ class Cart with ChangeNotifier{
     _cart.add(item);
     notifyListeners();
   }
-
-
 }
+

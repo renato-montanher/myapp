@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/ProviderTestes/contador/count_cart_provider/routes/routeGenerator.dart';
-
-import 'package:myapp/ProviderTestes/contador/count_cart_provider/state/cart.dart';
-import 'package:myapp/ProviderTestes/contador/count_cart_provider/state/count.dart';
-
+import 'routes/routeGenerator.dart';
+import 'package:myapp/ProviderTestes/contador/aula_multiprovider_count_card/state/cart.dart';
+import 'state/count.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -11,8 +9,8 @@ void main() {
     /// usando mais de um provider para armazenar os dados entre telas!
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => Cart()),
-        ChangeNotifierProvider(create: (_) => Count()),
+        ChangeNotifierProvider(create: (_) => Cart()),//modelo cart
+        ChangeNotifierProvider(create: (_) => Count()),//modelo count
       ],
       child: MyApp(),
     ),
@@ -20,8 +18,9 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
 
+  const MyApp({super.key});
+  
   // Lembrar de routeGenerator para navegar entre telas!
   @override
   Widget build(BuildContext context) {

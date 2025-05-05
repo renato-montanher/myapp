@@ -1,16 +1,15 @@
-
 import 'package:flutter/material.dart';
-import 'package:myapp/ProviderTestes/contador/count_cart_provider/routes/home.dart';
-import 'package:myapp/ProviderTestes/contador/count_cart_provider/routes/second.dart';
+import 'package:myapp/ProviderTestes/contador/aula_multiprovider_count_card/routes/home.dart';
+import 'package:myapp/ProviderTestes/contador/aula_multiprovider_count_card/routes/second.dart';
+
 class RouteGenerator {
-  // string com os caminhos para nossas telas. 
+  // string com os caminhos para nossas telas.
   static const String home = '/';
   static const String second = '/second';
 
-  RouteGenerator._() {}
+  RouteGenerator._();
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
-
     switch (settings.name) {
       case home:
         return MaterialPageRoute(builder: (_) => const Home());
@@ -22,8 +21,7 @@ class RouteGenerator {
   }
 }
 
-
 class RouteException implements Exception {
   final String message;
   const RouteException(this.message);
-} 
+}
